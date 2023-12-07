@@ -1,6 +1,5 @@
 <?php
 
-    // include('/../configuration/configuration.php');
     include(__DIR__ . '/../configuration/configuration.php');
     class ProductManager{
         private $conn;
@@ -32,7 +31,6 @@
             if(!$sql_obj->execute()){
                 die("Error: ". $sql_obj->error);
             }
-            // $sql_obj->execute();
             $data = $sql_obj->get_result();
             return $data->fetch_assoc();
         }
